@@ -10,6 +10,14 @@ Run some long-running code once and save the result. If the result
     already exists (has already been run and saved), then just read from this
     instead of computing again.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/privefl/runonce}
+  \item Report bugs at \url{https://github.com/privefl/runonce/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Florian Privé \email{florian.prive.21@gmail.com}
 
