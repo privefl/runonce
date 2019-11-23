@@ -4,12 +4,14 @@
 \name{runonce-package}
 \alias{runonce}
 \alias{runonce-package}
-\title{runonce: What the Package Does (One Line, Title Case)}
+\title{runonce: Run Once and Save Output}
 \description{
-What the package does (one paragraph).
+Run some long-running code once and save the result. If the result
+    already exists (has already been run and saved), then just read from this
+    instead of computing again.
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Florian Privé \email{florian.prive.21@gmail.com}
 
 }
 \keyword{internal}
