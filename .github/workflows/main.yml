@@ -3,15 +3,9 @@ on: [push, pull_request]
 name: R-CMD-check
 
 jobs:
-  prepare:
-    runs-on: ubuntu-latest
-    if: "! contains(github.event.head_commit.message, '[ci skip]')"
-    steps:
-      - run: echo "${{ github.event.head_commit.message }}"
-
   R-CMD-check:
+    if: "!contains(github.event.commits[0].message, '[skip ci]')"
     runs-on: ${{ matrix.config.os }}
-    needs: prepare
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
 
@@ -66,14 +60,3 @@ jobs:
         with:
           name: ${{ runner.os }}-r${{ matrix.config.r }}-results
           path: check
-
-  build:
-    runs-on: ubuntu-latest
-    needs: prepare
-    steps:
-    - name: Check condition
-      if: "! contains(github.event.head_commit.message, '[step skip]')"
-      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: |
-        echo "$GITHUB_CONTEXT"
