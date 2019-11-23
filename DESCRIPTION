@@ -1,14 +1,15 @@
 Package: runonce
-Title: What the Package Does (One Line, Title Case)
+Title: Run Once and Save Output
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Florian",
+           family = "Privé",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: What license it uses
+           email = "florian.prive.21@gmail.com")
+Description: Run some long-running code once and save the result. If the result
+    already exists (has already been run and saved), then just read from this
+    instead of computing again.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
