@@ -4,7 +4,7 @@
 \name{runonce-package}
 \alias{runonce}
 \alias{runonce-package}
-\title{runonce: Run Once and Save Output}
+\title{runonce: Run Once and Save Result}
 \description{
 Run some long-running code once and save the result. If the result
     already exists (has already been run and saved), then just read from this

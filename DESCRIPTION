@@ -1,6 +1,6 @@
 Package: runonce
-Title: Run Once and Save Output
-Version: 0.0.0.9000
+Title: Run Once and Save Result
+Version: 0.1.0
 Authors@R: 
     person(given = "Florian",
            family = "Privé",
@@ -16,3 +16,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.0.1
 Imports: 
     bigassertr
+Suggests: 
+    testthat (>= 2.1.0)
