@@ -18,7 +18,7 @@ test_that("save_run() works", {
       2
     }, file = tmp)
   )
-  expect_lte(time2[[3]], 0.001)
+  expect_lte(time2[[3]], 0.1)
   expect_identical(res2, 1)
 
 
