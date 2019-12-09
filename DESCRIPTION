@@ -6,9 +6,12 @@ Authors@R:
            family = "Privé",
            role = c("aut", "cre"),
            email = "florian.prive.21@gmail.com")
-Description: Run some long-running code once and save the result. If the result
-    already exists (has already been run and saved), then just read from this
-    instead of computing again.
+Description: Package 'runonce' helps automating the saving of long-running code
+    to help running the same code multiple times. If you run some long-running 
+    code once, it saves the result in a file on disk. Then, if the result 
+    already exists, i.e. if the code has already been run and its output has 
+    already been saved, it just read the result from the stored file instead 
+    of running the code again. 
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
