@@ -7,9 +7,9 @@
 save_run(code, file, timing = TRUE)
 }
 \arguments{
-\item{code}{Code to run. Do not forget to wrap it witt \code{{ }}.}
+\item{code}{Code to run. Do not forget to wrap it with \code{{ }}.}
 
-\item{file}{File where the result is stored. Should have extension \code{rds}.}
+\item{file}{File path where the result is stored. Should have extension \code{rds}.}
 
 \item{timing}{Whether to print timing of running code? Default is \code{TRUE}.}
 }
@@ -20,13 +20,16 @@ The evaluation of \code{code} the first time, the content of \code{file} otherwi
 Cache result
 }
 \examples{
+# Prepare some temporary file
 tmp <- tempfile(fileext = ".rds")
 
+# Run once because result does not exist yet
 save_run({
   Sys.sleep(2)
   1
 }, file = tmp)
 
+# Skip run because result exists
 save_run({
   Sys.sleep(2)
   1

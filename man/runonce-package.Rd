@@ -5,6 +5,11 @@
 \alias{runonce}
 \alias{runonce-package}
 \title{runonce: Run Once and Save Result}
+\arguments{
+\item{code}{Code to run. Do not forget to wrap it with \code{{ }}.}
+
+\item{timing}{Whether to print timing of running code? Default is \code{TRUE}.}
+}
 \description{
 Package 'runonce' helps automating the saving of long-running code
     to help running the same code multiple times. If you run some long-running 

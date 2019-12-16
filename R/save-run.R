@@ -1,20 +1,22 @@
 #' Cache result
 #'
-#' @param code Code to run. Do not forget to wrap it witt `{ }`.
-#' @param file File where the result is stored. Should have extension `rds`.
-#' @param timing Whether to print timing of running code? Default is `TRUE`.
+#' @inheritParams runonce-package
+#' @param file File path where the result is stored. Should have extension `rds`.
 #'
 #' @return The evaluation of `code` the first time, the content of `file` otherwise.
 #' @export
 #'
 #' @examples
+#' # Prepare some temporary file
 #' tmp <- tempfile(fileext = ".rds")
 #'
+#' # Run once because result does not exist yet
 #' save_run({
 #'   Sys.sleep(2)
 #'   1
 #' }, file = tmp)
 #'
+#' # Skip run because result exists
 #' save_run({
 #'   Sys.sleep(2)
 #'   1
