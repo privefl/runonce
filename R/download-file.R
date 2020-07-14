@@ -1,10 +1,3 @@
-# Used e.g. after dropbox urls
-rm_dl_raw <- function(url) {
-  sub("\\?raw.+$", "",
-      sub("\\?dl.+$", "",
-          url))
-}
-
 #' Download
 #'
 #' Download file if does not exist yet.
@@ -26,7 +19,7 @@ rm_dl_raw <- function(url) {
 #' download_file("https://github.com/privefl.png", overwrite = TRUE)
 #'
 download_file <- function(url, dir = tempdir(),
-                          fname = basename(rm_dl_raw(url)),
+                          fname = basename(urltools::path(url)),
                           overwrite = FALSE,
                           mode = "wb",
                           ...) {

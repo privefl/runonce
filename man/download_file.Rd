@@ -7,7 +7,7 @@
 download_file(
   url,
   dir = tempdir(),
-  fname = basename(rm_dl_raw(url)),
+  fname = basename(urltools::path(url)),
   overwrite = FALSE,
   mode = "wb",
   ...

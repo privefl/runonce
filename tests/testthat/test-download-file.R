@@ -1,11 +1,3 @@
-test_that("rm_dl_raw() works", {
-  expect_identical(rm_dl_raw("aaa.txt"),       "aaa.txt")
-  expect_identical(rm_dl_raw("aaa.txt?dl=1"),  "aaa.txt")
-  expect_identical(rm_dl_raw("aaa.txt?dl=0"),  "aaa.txt")
-  expect_identical(rm_dl_raw("aaa.txt?raw=1"), "aaa.txt")
-  expect_identical(rm_dl_raw("aaa.txt?raw=0"), "aaa.txt")
-})
-
 test_that("download_file() works", {
 
   myurl <- "https://github.com/privefl.png"
