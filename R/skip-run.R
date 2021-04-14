@@ -4,6 +4,7 @@
 #' The code should not return anything.
 #'
 #' @inheritParams runonce-package
+#' @param code Code to run. Do not forget to wrap it with `{ }`.
 #' @param cond Condition to be fulfilled to skip running `code`.
 #'   Default is `NULL` (not used).
 #'   Should evaluate to either `TRUE` or `FALSE` otherwise.
@@ -43,7 +44,7 @@ skip_run_if <- function(code, cond = NULL, files = NULL, timing = TRUE) {
     if (is.null(files))
       stop2("Please specify one of 'cond' or 'files' parameters.")
   } else {
-    if (!isTRUE(cond) && !isTRUE(!cond))
+    if (!(is.logical(cond) && length(cond) == 1 && !is.na(cond)))
       stop2("'cond' should be either TRUE or FALSE.")
   }
 

@@ -6,8 +6,6 @@
 \alias{runonce-package}
 \title{runonce: Run Once and Save Result}
 \arguments{
-\item{code}{Code to run. Do not forget to wrap it with \code{{ }}.}
-
 \item{timing}{Whether to print timing of running code? Default is \code{TRUE}.}
 }
 \description{
@@ -15,7 +13,7 @@ Package 'runonce' helps automating the saving of long-running code
     to help running the same code multiple times. If you run some long-running 
     code once, it saves the result in a file on disk. Then, if the result 
     already exists, i.e. if the code has already been run and its output has 
-    already been saved, it just read the result from the stored file instead 
+    already been saved, it just reads the result from the stored file instead 
     of running the code again.
 }
 \seealso{

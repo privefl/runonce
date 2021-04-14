@@ -1,6 +1,11 @@
 #' Cache result
 #'
+#' Cache the result of `code` in an RDS file.
+#'
 #' @inheritParams runonce-package
+#' @param code Code to run. Do not forget to wrap it with `{ }`. Also, beware
+#'   that it is your job to make sure your code and data has not changed. If this
+#'   is the case, you need to remove the `file` storing the outdated result.
 #' @param file File path where the result is stored. Should have extension `rds`.
 #'
 #' @return The evaluation of `code` the first time, the content of `file` otherwise.
@@ -16,7 +21,8 @@
 #'   1
 #' }, file = tmp)
 #'
-#' # Skip run because result exists
+#' # Skip run because the result already exists
+#' # (but still output how long it took the first time)
 #' save_run({
 #'   Sys.sleep(2)
 #'   1
@@ -30,15 +36,22 @@ save_run <- function(code, file, timing = TRUE) {
 
   if (file.exists(file)) {
 
-    readRDS(file)
+    res <- readRDS(file)
+
+    time <- attr(res, "RUNONCE_TIMING")
+    attr(res, "RUNONCE_TIMING") <- NULL
 
   } else {
 
-    time <- system.time(res <- code)
-    if (timing) print(time)
+    time <- system.time(
+      res <- code
+    )
 
-    saveRDS(res, file)
-    res
+    saveRDS(structure(res, RUNONCE_TIMING = time), file)
 
   }
+
+  if (timing && !is.null(time)) print(time)
+
+  res
 }

@@ -7,7 +7,9 @@
 save_run(code, file, timing = TRUE)
 }
 \arguments{
-\item{code}{Code to run. Do not forget to wrap it with \code{{ }}.}
+\item{code}{Code to run. Do not forget to wrap it with \code{{ }}. Also, beware
+that it is your job to make sure your code and data has not changed. If this
+is the case, you need to remove the \code{file} storing the outdated result.}
 
 \item{file}{File path where the result is stored. Should have extension \code{rds}.}
 
@@ -17,7 +19,7 @@ save_run(code, file, timing = TRUE)
 The evaluation of \code{code} the first time, the content of \code{file} otherwise.
 }
 \description{
-Cache result
+Cache the result of \code{code} in an RDS file.
 }
 \examples{
 # Prepare some temporary file
@@ -29,7 +31,8 @@ save_run({
   1
 }, file = tmp)
 
-# Skip run because result exists
+# Skip run because the result already exists
+# (but still output how long it took the first time)
 save_run({
   Sys.sleep(2)
   1

@@ -1,6 +1,5 @@
 #' @keywords internal
 #'
-#' @param code Code to run. Do not forget to wrap it with `{ }`.
 #' @param timing Whether to print timing of running code? Default is `TRUE`.
 #'
 #' @importFrom bigassertr stop2

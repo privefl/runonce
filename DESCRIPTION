@@ -10,12 +10,12 @@ Description: Package 'runonce' helps automating the saving of long-running code
     to help running the same code multiple times. If you run some long-running 
     code once, it saves the result in a file on disk. Then, if the result 
     already exists, i.e. if the code has already been run and its output has 
-    already been saved, it just read the result from the stored file instead 
+    already been saved, it just reads the result from the stored file instead 
     of running the code again. 
 License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1
 Imports: 
     bigassertr,
     urltools
