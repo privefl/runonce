@@ -2,12 +2,12 @@
 % Please edit documentation in R/download-file.R
 \name{download_file}
 \alias{download_file}
-\title{Download}
+\title{Download once}
 \usage{
 download_file(
   url,
   dir = tempdir(),
-  fname = basename(urltools::path(url)),
+  fname = url_basename(url),
   overwrite = FALSE,
   mode = "wb",
   ...

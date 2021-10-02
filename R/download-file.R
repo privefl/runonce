@@ -1,4 +1,12 @@
-#' Download
+################################################################################
+
+url_basename <- function(url) {
+  basename(urltools::path(url))
+}
+
+################################################################################
+
+#' Download once
 #'
 #' Download file if does not exist yet.
 #'
@@ -18,8 +26,9 @@
 #' download_file("https://github.com/privefl.png")
 #' download_file("https://github.com/privefl.png", overwrite = TRUE)
 #'
-download_file <- function(url, dir = tempdir(),
-                          fname = basename(urltools::path(url)),
+download_file <- function(url,
+                          dir = tempdir(),
+                          fname = url_basename(url),
                           overwrite = FALSE,
                           mode = "wb",
                           ...) {
@@ -32,3 +41,5 @@ download_file <- function(url, dir = tempdir(),
 
   fname
 }
+
+################################################################################

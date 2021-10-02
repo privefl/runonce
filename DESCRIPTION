@@ -1,9 +1,8 @@
 Package: runonce
 Title: Run Once and Save Result
-Version: 0.2.2
+Version: 0.2.3
 Authors@R: 
-    person(given = "Florian",
-           family = "Privé",
+    person("Florian", "Privé",
            role = c("aut", "cre"),
            email = "florian.prive.21@gmail.com")
 Description: Package 'runonce' helps automating the saving of long-running code
