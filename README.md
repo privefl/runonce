@@ -1,5 +1,6 @@
 <!-- badges: start -->
 [![R build status](https://github.com/privefl/runonce/workflows/R-CMD-check/badge.svg)](https://github.com/privefl/runonce)
+[![Codecov test coverage](https://codecov.io/gh/privefl/runonce/branch/master/graph/badge.svg)](https://codecov.io/gh/privefl/runonce?branch=master)
 <!-- badges: end -->
 
 # runonce
