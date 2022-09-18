@@ -21,5 +21,6 @@ Imports:
 Suggests: 
     testthat (>= 2.1.0),
     covr
-URL: https://github.com/privefl/runonce
+URL: https://github.com/privefl/runonce,
+    https://privefl.github.io/runonce/
 BugReports: https://github.com/privefl/runonce/issues
