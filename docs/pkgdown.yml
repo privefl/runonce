@@ -1,0 +1,9 @@
+pandoc: 2.11.2
+pkgdown: 2.0.6
+pkgdown_sha: ~
+articles: {}
+last_built: 2022-09-18T05:23Z
+urls:
+  reference: https://privefl.github.io/runonce/reference
+  article: https://privefl.github.io/runonce/articles
+
