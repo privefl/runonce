@@ -46,10 +46,5 @@ test_that("save_run() works", {
   out6 <- capture.output(
     res5 <- save_run({ Sys.sleep(2); cat("OK\n"); 10 }, file = tmp3, timing = FALSE)
   )
-  expect_identical(out6, "OK")
-
-  out7 <- capture.output(
-    res5 <- save_run({ Sys.sleep(2); cat("OK\n"); 10 }, file = tmp3, output = FALSE)
-  )
-  expect_identical(out7, out5[-1])
+  expect_length(out6, 0)  # no output anymore
 })

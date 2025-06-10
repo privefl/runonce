@@ -4,7 +4,7 @@
 \alias{save_run}
 \title{Cache result}
 \usage{
-save_run(code, file, timing = TRUE, output = TRUE)
+save_run(code, file, timing = TRUE)
 }
 \arguments{
 \item{code}{Code to run. Do not forget to wrap it with \code{{ }}. Also, beware
@@ -14,8 +14,6 @@ this is the case, you need to remove the \code{file} storing the outdated result
 \item{file}{File path where the result is stored. Should have extension \code{rds}.}
 
 \item{timing}{Whether to print timing of running code? Default is \code{TRUE}.}
-
-\item{output}{Whether to print any message output of \code{code}? Default is \code{TRUE}.}
 }
 \value{
 The evaluation of \code{code} the first time, the content of \code{file} otherwise.
