@@ -1,6 +1,6 @@
 Package: runonce
 Title: Run Once and Save Result
-Version: 0.3.0
+Version: 0.3.1
 Authors@R: 
     person("Florian", "Privé",
            role = c("aut", "cre"),

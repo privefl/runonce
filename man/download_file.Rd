@@ -10,6 +10,7 @@ download_file(
   fname = url_basename(url),
   overwrite = FALSE,
   mode = "wb",
+  timeout = max(300, getOption("timeout")),
   ...
 )
 }
@@ -24,6 +25,8 @@ download_file(
 
 \item{mode}{See parameter of \code{\link[=download.file]{download.file()}}.
 Default of "wb" seems useful for Windows systems.}
+
+\item{timeout}{Number of seconds before timeout. Default is 300 (5 minutes).}
 
 \item{...}{
   Arguments passed on to \code{\link[utils:download.file]{utils::download.file}}
