@@ -40,7 +40,7 @@ save_run <- function(code, file, timing = TRUE, output = TRUE) {
   } else {
 
     runtime <- system.time(
-      out <- capture.output(
+      out <- utils::capture.output(
         res <- code
       )
     )
