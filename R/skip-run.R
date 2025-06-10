@@ -56,8 +56,8 @@ skip_run_if <- function(code, cond = NULL, files = NULL, timing = TRUE) {
 
   } else {
 
-    time <- system.time(code)
-    if (timing) print(time)
+    runtime <- system.time(code)
+    if (timing) print(runtime)
 
   }
 

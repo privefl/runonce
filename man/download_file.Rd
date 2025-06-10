@@ -29,9 +29,10 @@ Default of "wb" seems useful for Windows systems.}
   Arguments passed on to \code{\link[utils:download.file]{utils::download.file}}
   \describe{
     \item{\code{method}}{Method to be used for downloading files.  Current
-    download methods are \code{"internal"}, \code{"wininet"} (Windows
-    only) \code{"libcurl"}, \code{"wget"} and \code{"curl"}, and there
-    is a value \code{"auto"}: see \sQuote{Details} and \sQuote{Note}.
+    download methods are \code{"internal"}, \code{"libcurl"},
+    \code{"wget"}, \code{"curl"} and \code{"wininet"} (Windows
+    only), and there is a value \code{"auto"}: see \sQuote{Details} and
+    \sQuote{Note}.
 
     The method can also be set through the option
     \code{"download.file.method"}: see \code{\link{options}()}.
@@ -43,8 +44,8 @@ Default of "wb" seems useful for Windows systems.}
     the \code{"wget"} and \code{"curl"} methods.}
     \item{\code{headers}}{named character vector of HTTP headers to use in HTTP
     requests.  It is ignored for non-HTTP URLs.  The \code{User-Agent}
-    header, coming from the \code{HTTPUserAgent} option (see
-    \code{\link{options}}) is used as the first header, automatically.}
+    header taken from the \code{HTTPUserAgent} option (see
+    \code{\link{options}}) is automatically used as the first header.}
   }}
 }
 \value{

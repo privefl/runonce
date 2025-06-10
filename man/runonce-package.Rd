@@ -15,6 +15,7 @@ Package 'runonce' helps automating the saving of long-running code to help runni
 Useful links:
 \itemize{
   \item \url{https://github.com/privefl/runonce}
+  \item \url{https://privefl.github.io/runonce/}
   \item Report bugs at \url{https://github.com/privefl/runonce/issues}
 }
 
