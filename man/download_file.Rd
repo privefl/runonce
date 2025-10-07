@@ -26,7 +26,8 @@ download_file(
 \item{mode}{See parameter of \code{\link[=download.file]{download.file()}}.
 Default of "wb" seems useful for Windows systems.}
 
-\item{timeout}{Number of seconds before timeout. Default is 300 (5 minutes).}
+\item{timeout}{Number of seconds before timeout. Default is 300 (5 minutes),
+or \code{getOption("timeout")} when larger.}
 
 \item{...}{
   Arguments passed on to \code{\link[utils:download.file]{utils::download.file}}
@@ -45,10 +46,10 @@ Default of "wb" seems useful for Windows systems.}
     \item{\code{cacheOK}}{logical.  Is a server-side cached value acceptable?}
     \item{\code{extra}}{character vector of additional command-line arguments for
     the \code{"wget"} and \code{"curl"} methods.}
-    \item{\code{headers}}{named character vector of HTTP headers to use in HTTP
-    requests.  It is ignored for non-HTTP URLs.  The \code{User-Agent}
-    header taken from the \code{HTTPUserAgent} option (see
-    \code{\link{options}}) is automatically used as the first header.}
+    \item{\code{headers}}{named character vector of additional HTTP headers to
+    use in HTTP[S] requests.  It is ignored for non-HTTP[S] URLs.  The
+    \code{User-Agent} header taken from the \code{HTTPUserAgent} option
+    (see \code{\link{options}}) is automatically used as the first header.}
   }}
 }
 \value{

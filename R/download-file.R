@@ -16,7 +16,8 @@ url_basename <- function(url) {
 #' @param overwrite Whether to overwrite? Default is `FALSE`.
 #' @param mode See parameter of [download.file()].
 #'   Default of "wb" seems useful for Windows systems.
-#' @param timeout Number of seconds before timeout. Default is 300 (5 minutes).
+#' @param timeout Number of seconds before timeout. Default is 300 (5 minutes),
+#'   or `getOption("timeout")` when larger.
 #' @inheritDotParams utils::download.file -url -destfile -mode
 #'
 #' @return Path to the downloaded (or existing) file.
